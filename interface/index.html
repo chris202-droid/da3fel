@@ -1,0 +1,309 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="fr">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+		More info: h5bp.com/b/378 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Accueil</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<!-----------------------Liens CSS --------------------------->
+		<link rel="shortcut icon" href="img/favicon.png"/>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="js/wizard/wizard.css">
+		<link rel="stylesheet" href="js/jquery-steps/jquery.steps.css">
+		<!---------------  Script JS---------------->
+		<script src="js/libs/jquery-3.2.1.min.js"></script>
+		<script src="js/jquery.fileupload.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/wizard/wizard.js"></script>
+		<script src="js/jquery-steps/jquery.steps.js"></script>
+		<script src="assets/js/form_wizard.js"></script>
+		<script src="js/form_wizard.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="container" class="">
+
+			<!-- ----------------Entete_Debut------------------->
+			<header id="entete">
+				<div class="row">
+					<div class="col-sm-4 ">
+						<a href="index.html"> <img src="img/logo.png" id="logo" /></a>
+					</div>
+					<div class="col-sm-8" >
+						<h1 class="color-white text-shadow " id="titre-appli"> SYSTEME DE GESTION UNIVERSITAIRE </h1>
+					</div>
+				</div>
+
+			</header>
+			<!-- ----------------Entete_Fin------------------->
+
+			<!-- ---------------Corps_Debut------------------->
+			<div id="main" >
+				<div class="corps" >
+					<marquee direction="left">
+						<h1>Bienvenue sur le portail de Gestion de l'Université </h1>
+					</marquee>
+					<div class="border border-radius " id="cadre_logo">
+						<div id="cadre" >
+							<img src="img/logoUY1.png" width="300px" height="350px" />
+						</div>
+						<div class=" margin-left-70" id="group-bouton">
+							<button id="btn-connexion" class="bouton border-radius" >
+								<span class="glyphicon glyphicon-off"> </span> Connexion
+							</button>
+							<button id="btn-preinscription" class="bouton border-radius" >
+								<span class="glyphicon glyphicon-pencil"> </span> Préinscription
+							</button>
+							<!--button id="btn-inscription" class="bouton border-radius" >
+								<span class="glyphicon glyphicon-user"> </span> Inscription
+							</button-->
+						</div>
+
+					</div>
+
+				</div>
+
+				<!--------------------------- debut formulaire----------------------->
+
+				<!---------------------------------------------- FENÊTRE CONNEXION ----------------------------------------------->
+				<div class="modal fade" id="fenetre-connexion" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Contenu de la fenêtre -->
+						<div class="modal-content">
+							<div class="modal-header" >
+								<button type="button" class="close" data-dismiss="modal">
+									&times;
+								</button>
+								<h4 class="titre-modal"><span class="glyphicon glyphicon-lock"></span> Connexion</h4>
+							</div>
+							<!------corps de la fenêtre---->
+
+							<div class="modal-body" style="padding:40px 50px;">
+
+								<!------formulaire de connexion---->
+								<form  class="cmxform" id="form-connexion" method="get" action="" role="form">
+									<div class="form-group">
+										<label for="NomUtilisateur"><span class="glyphicon glyphicon-user"></span> Nom d'utilisateur</label>
+										<input type="text" class="form-control" id="NomUtilisateur" name="NomUtilisateur" placeholder="Entrez Matricule" required>
+									</div>
+									<div class="form-group">
+										<label for="Mot2Pass"><span class="glyphicon glyphicon-lock"></span> Mot de passe</label>
+										<input type="text" class="form-control" id="Mot2Pass" name="Mot2Pass" placeholder="Entrez Mot de passe" required>
+									</div>
+									<div class="form-group" id="otp">
+										<label for="NomUtilisateur"><span class="glyphicon glyphicon-user"></span> Entrez votre Token</label>
+										<input type="text" class="form-control" id="otp" name="otp" placeholder="_ _ _ _ _ _" required>
+									</div>
+									<button type="submit" class="btn bouton border-radius btn-block" id="connect">
+										<span class="glyphicon glyphicon-off"> </span> Connexion
+									</button>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+									<span class="glyphicon glyphicon-remove"></span> Fermer
+								</button>
+
+								<p>
+									<a href="#">Mot de passe oublié?</a>
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!------ fin Fenetre de connexion---------------------------->
+				
+				
+
+				<!------------------------------------------------------- Fenetre d'inscription----------------------------------------------------------------------------------------->
+
+				<div class="modal fade" id="fenetre-preinscription" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Contenu de la fenêtre inscription -->
+						<div class="modal-content">
+							<div class="modal-header" >
+								<button type="button" class="close" data-dismiss="modal">
+									&times;
+								</button>
+								<h4 class="titre-modal"><span class="glyphicon glyphicon-pencil"></span> Inscription</h4>
+							</div>
+							<!------corps de la fenêtre inscription ---->
+
+							<div class="panel-body" style="padding:30px 30px;">
+								<div class="row">
+									<div class="col-sm-12" >
+										<h3>Assistance d'inscription</h3>
+										<p>
+											Veillez remplir étape par étape toutes les cases çi-dessous.
+										</p>
+
+										<!-- Debut de l'assistance de validation de formulaire d'inscription  -->
+
+										<form class="form-wizard" action="#" >
+
+											<!-- Section 1  Informations personnelles-->
+
+											<h1>Informations personnelles</h1>
+
+											<section >
+												<div class="form-group">
+													<label for="nom">Nom <code>*</code></label>
+													<input id="nom" name="nom" type="text" class="form-control required">
+												</div>
+												<div class="form-group">
+													<label for="prenom">Prénom </label>
+													<input id="prenom" name="prenom" type="text" class="form-control">
+												</div>
+												<div class="form-group row">
+													<span class=" col-sm-4"> <label for="date-naiss">Date de naissance <code>*</code></label>
+														<input id="date-naiss" name="date-naiss" type="date" class="form-control required">
+													</span>
+													
+													<span class=" col-sm-4"> <label for="sexe">sexe <code>*</code></label>
+														<select  name="sexe" class="form-control required" >
+															<option value="">Choisir votre sexe</option>
+															<option value="masc">M </option>
+															<option value="fem">F</option>
+														</select> </span>
+												</div>
+												<div class="form-group">
+
+												</div>
+
+												<div class="form-group row">
+													
+													<span class="col-sm-6"> <label for="telephone"> Numéro de Téléphone <code>*</code></label>
+														<input id="telephone" type="tel" name="telephone"  required="required" maxlength="9"  placeholder="Exemple: 694740340" class="form-control required" pattern="^(23|(6[5-9]))\d{1}(\d{3}){2}$">
+													</span>
+													<span class="col-sm-6">
+														<label for="email">Email <code>*</code></label>
+													<input id="email" type="email" name="email"   maxlength="50"   class="form-control required" pattern="^(\w|\d){1,}@(\w|\d)+.(\w{3})$" placeholder="Exemple: CamerIT@tech.com" required>
+														
+													</span>
+													
+												</div>
+												
+												<p>
+													(<code>*</code>) Obligatoire
+												</p>
+											</section>
+
+											<!-- Section 2 Informations urgentes-->
+
+											<h1>Informations de Connexion</h1>
+											<section>
+												<div class="form-group">
+													<label for="username"><span class="glyphicon glyphicon-user"></span> Nom d'utilisateur</label>
+													<input type="text" class="form-control" id="username" name="username" placeholder="Entrez Nom utilisateur" required>
+												</div>
+												<div class="form-group">
+													<label for="pass"><span class="glyphicon glyphicon-lock"></span> Mot de passe</label>
+													<input type="text" class="form-control" id="pass" name="pass" placeholder="Entrez le Mot de passe" required>
+												</div>
+												<div class="form-group">
+													<label for="confirmpass"><span class="glyphicon glyphicon-lock"></span> Mot de passe</label>
+													<input type="text" class="form-control" id="confirmpass" name="confirmpass" placeholder="Confirmer le Mot de passe" required>
+												</div>
+
+											</section>
+
+											<!-- Section 3 Faculté et Filiaire-->
+											<h1>Informations Biométrique</h1>
+											<section>
+												
+
+											</section>
+											<!-- Section 4 Information sur la santé-->
+
+											
+										</form>
+										<!----------------- Fin validation du formulaire d'inscription---------------------------- -->
+
+									</div>
+
+								</div>
+							</div>
+
+							<!----------- fin corps fenetre-------------->
+						</div>
+
+					</div>
+				</div>
+
+				<!-------------------------------------------------------------------------- Fin fenêtre Preinscription-------------------------------------------------------------------------->
+				
+				
+				
+				
+				<!-------------------------------------------------------------------------- FENÊTRE D'INSCRIPTION-------------------------------------------------------------------------->
+				
+						
+				<!-------------------------------------------------------------------------- FIN FENÊTRE D'INSCRIPTION-------------------------------------------------------------------------->
+
+			</div>
+			<!-- ---------------Corps_Fin------------------->
+
+			<!-- ---------------Pieds de page DEBUT------------------->
+
+			<footer class="background-color-blue">
+				<h4 class="text-align-center color-white padding-10 text-shadow">copyright 2017</h4>
+			</footer>
+
+			<!-- ---------------Pieds de page DEBUT------------------->
+		</div>
+
+		<script>
+			$(document).ready(function() {
+				$("#btn-connexion").click(function() {
+					$("#fenetre-connexion").modal();
+				});
+				$("#btn-preinscription").click(function() {
+					$("#fenetre-preinscription").modal();
+				});
+				$("#btn-inscription").click(function() {
+					$("#fenetre-inscription").modal();
+				});
+
+			});
+
+		</script>
+		
+		<script>
+			$('form').on('focus', 'input[type=number]', function (e) {
+  $(this).on('mousewheel.disableScroll', function (e) {
+    e.preventDefault()
+  })
+})
+$('form').on('blur', 'input[type=number]', function (e) {
+  $(this).off('mousewheel.disableScroll')
+})
+		</script>
+
+	</body>
+
+</html>

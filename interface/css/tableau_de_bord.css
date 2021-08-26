@@ -1,0 +1,69 @@
+/***********************************************************************************************************/
+/************************************ Tableau de bord ******************************************************/
+/***********************************************************************************************************/
+
+#tab_titre {
+	display: inline-block;
+	position: relative;
+	top: -10px;
+}
+#side_bar {
+	position: relative;
+	margin-bottom: 0px;
+	height: 800px;
+	z-index: 0;
+}
+ul{
+	
+	margin-left: 0px;
+}
+ul a{
+	display: block;
+}
+
+li {
+	text-align:left;
+	
+	padding: 10px 35px;
+	margin-left: -40px;
+}
+li:hover,li:active ul{
+	
+	background-color:#8cbed9;
+	display: block;
+}
+
+li a {
+	color: white;
+	text-decoration: none;
+}
+ul li {
+	list-style-type: none;
+}
+li ul {
+	display: none;
+}
+
+#section{
+	padding: 80px;
+	
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top:30px;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.input{ width: 20px;}
+input[type="submit"], input[type="reset"]{ height:40px;}
+#charger_anonymat{margin-top:30px;}

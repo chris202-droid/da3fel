@@ -1,0 +1,54 @@
+/*****************************************************************************************************/
+/************************************ Page de Préinscription Faculté **********************************/
+/****************************************************************************************************/
+
+
+fieldset{
+	margin-right: 80px;
+	margin-bottom: 10px;
+	padding: 20px;
+	border:1px solid #f1f1f1;
+	border-radius{border-radius: 5px}
+	
+}
+#cadre_preinscription{
+		margin:80px 10%;
+width: 80%;
+
+padding-bottom: 20px;
+}
+
+#tritre_preinscription{
+	top: -15px;
+}
+
+.img_logo{
+	display:inline-block;
+	position: relative;
+	left: 35%;
+	padding-top: 10px;
+}
+
+label{
+	width: 200px;
+	display: inline-block;
+	font-size: 16px;
+	
+}
+.input{
+	height: 18px;
+	width:300px;
+	padding: 5px 10px;
+}
+.grpe_bouton{
+	position: relative;
+	left:25%;
+}
+.grpe_formulaire{
+	display: none;
+}
+
+input[type="radio"]{
+	width: auto;
+}
+

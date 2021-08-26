@@ -1,0 +1,288 @@
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231;
+position: relative;
+min-height: 100%;
+overflow-x: hidden;
+ }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222;  }
+
+  footer {
+      background-color: #3d8db7;
+      color: white;
+      padding: 15px;
+      width:100%;
+      
+      
+    }
+    
+    .nav{
+    	position: : fixed;
+    }
+
+.input{
+	height: 18px;
+	width:250px;
+
+}
+
+a{
+	color: #3d8db7; 
+}
+a:hover {
+	color: #cc00cc; 
+}
+h1{
+	font-size:26px;
+	line-height: 28px;
+	font-weight: 700;
+}
+
+ul{list-style-type: none;}
+/********************element à usage général******/
+
+
+
+.clear-both{clear: both;}
+.bouton-width{width: 12em; margin-right: 10px; margin-top:5px;}
+.grpe-bouton{
+	float: right;
+}
+    
+/***** colonne****/
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/***** alignements*****/
+
+.text-align-center{text-align:center;}
+.text-align-left{text-align:left;}
+.text-align-right{text-align:right;}
+.vertical-align-center{vertical-align:center;}
+
+/********display********/
+
+.inline{ display: inline;}
+.block{display: block;}
+.inline-block{display: inline-block;}
+.inline-table{display: inline-table;}
+
+
+/******* marges*******/
+.margin-top-20{margin-top:20px;}
+.margin-left-20{margin-left:20px;}
+.margin-left-30{margin-left:30px;}
+.margin-left-40{margin-left:40px;}
+.margin-left-50{margin-left:50px;}
+.margin-left-80{margin-left:80px;}
+.margin-left-100{margin-left:100px;}
+.margin-left-150{margin-left:150px;}
+.margin-bottom-40{margin-bottom:40px;}
+.padding-10{padding:10px;}
+.padding-20{padding:20px;}
+.line-height{line-height:1;}
+.line-height-2{line-height:2;}
+
+/*******position*****/
+
+.left-25{left:25%;}
+.left-15{left:15%;}
+.right-25{right: 25%;}
+
+/******* float ******/
+
+.float-left{float: left;}	
+.float-right{float: right;}	
+
+/******bordures*******/
+
+.border{border:1px solid #f1f1f1;}
+
+/****** image ******/
+
+/****** icones ****/
+.icon { width: auto; height: 16px;}
+
+/******image ******/
+
+
+/******couleurs, background et ombre*****/
+
+.color-white{color: white;}
+.color-blue{color: #3d8db7;}
+.text-shadow{text-shadow:: 2px 2px 4px #000000;}
+.box-shadow{  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
+.background-color-blue{background-color: #3d8db7;}
+
+
+/****** Rayon de bordure*****/
+
+.border-radius{border-radius: 4px}
+
+
+/********************** typographie *****************************/
+
+.font-size-18px{font-size:18px;}
+.font-size-24px{font-size:24px;}
+
+
+
+
+/**********************entete*********************/
+#entete{
+	position:static;
+	
+	background-color: #3d8db7;
+	height: 100px;
+	padding:10px;
+	 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	 z-index: 1;
+
+}
+/** clear: both;**/
+	/***min-width: 100%;*//
+#titre-appli{
+	font-family:"Century Gothic";
+	font-size: 35px;
+	text-shadow:: 2px 2px 4px #000000;
+	line-height: 48px;
+	font-weight: 700;
+}
+
+#logo{
+	width: 100px;
+	height: auto;
+	
+}
+/*********************corps**********************/
+#cadre_logo{
+	margin:80px 25%;
+width: 55%;
+
+padding: 40px 0;
+
+}
+#cadre{
+	display:inline-block;
+	position:relative;
+
+	margin-left: 30%;
+	margin-right: 30%;
+	
+}
+#group-bouton{
+	margin-top:10px;
+	margin-left: 20%;
+}
+.bouton{
+	background-color: #3d8db7;
+	
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	
+}
+
+.bouton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.bouton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bouton span:after {
+  
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.bouton:hover span {
+  padding-right: 15px;
+}
+
+.bouton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.background1{
+	background: url(img/menu_icon1.gif)
+}
+
+.modal-header  {
+      background-color: #3d8db7;
+  padding:15px 50px;
+  }
+  
+  .titre-modal, .close{
+  	color:white !important;
+      text-align: center;
+      font-size: 24px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+ #fenetre-preinscription .modal-dialog{
+
+width:70%;
+
+}
+#conteneur-form{
+	min-height: 800px;
+}
+/*************************** pieds_page*******************************/
+
+/********************* Style tableau de bord de l'etudiant*************/
+#corps{
+	padding-top:10px;
+}
+
+#barre-laterale{
+	padding: 0 30px;
+	height: 100%;
+	max-width:250px;	
+}
+#menu-lateral{
+	background-color: #f1f1f1;
+	position:absolute;
+	left: -2%;
+}
+.menu-item{
+	position: absolute;
+	left: 1%;
+	background-color: #f1f1f1;
+}
+#pannel{
+	height: 1000px;
+	width: 100%;
+	border: none;
+}
+
+/************************ style tableau de bord etudiant***********************/
+#btn-off{
+	margin-top: 20px;
+}

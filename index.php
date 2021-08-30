@@ -1,6 +1,4 @@
-
-
-BONJOUR
+<?PHP echo "yes"; ?>
  <?php 
  session_start();
  $NomUtilisateur = "";

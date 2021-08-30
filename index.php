@@ -1,3 +1,6 @@
+
+
+BONJOUR
  <?php 
  session_start();
  $NomUtilisateur = "";

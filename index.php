@@ -5,7 +5,8 @@
 $Mot2Pass = "";
  $pied = "pied.php";
  $tete = "tete.php";
-	$pages = scandir('pages/');
+  $path = 'https://github.com/chris202-droid/da3fel/tree/main/pages/'
+	$pages = scandir($path);
 
 	if(isset($_GET['page']) && !empty($_GET['page']) && in_array($_GET['page'],$pages )){
 		$page = $_GET['page'];
@@ -167,12 +168,12 @@ if(isset($_POST['valid']))
 
 			<!-- ----------------Entete_Debut------------------->
 			
-			<?php include 'pages/'.$tete; ?>
+			<?php include "$path".$tete; ?>
 			<!-- ----------------Entete_Fin------------------->
 
 			<!-- ---------------Corps_Debut------------------->
 			<div id="main" >
-				<?php include 'pages/'.$page; ?>
+				<?php include "$path".$page; ?>
 
 				<!--------------------------- debut formulaire----------------------->
 
@@ -180,9 +181,9 @@ if(isset($_POST['valid']))
 				<?php include 'pages/connexion.php'; ?>
 				<!------ fin Fenetre de connexion---------------------------->
 				
-				<?php //include 'pages/otp.php'; ?>
+				<?php //include "$path".otp.php; ?>
 				<!---------------------------------------------- Fenetre d'inscription ------------------------------------------------------>
-				<?php include 'pages/inscription.php'; ?>
+				<?php include "$path".inscription.php; ?>
 
 				<!-------------------------------------------------------------------------- Fin fenêtre d'inscription-------------------------------------------------------------------------->
 				
@@ -198,7 +199,7 @@ if(isset($_POST['valid']))
 
 			<!-- ---------------Pieds de page DEBUT------------------->
 
-			<?php include 'pages/'.$pied; ?>
+			<?php include "$path".$pied; ?>
 			<!-- ---------------Pieds de page DEBUT------------------->
 		</div>
 

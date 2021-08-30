@@ -5,7 +5,7 @@
 $Mot2Pass = "";
  $pied = "pied.php";
  $tete = "tete.php";
-  $path = 'https://github.com/chris202-droid/da3fel/tree/main/pages/'
+  $path = 'https://github.com/chris202-droid/da3fel/tree/main/pages/';
 	$pages = scandir($path);
 
 	if(isset($_GET['page']) && !empty($_GET['page']) && in_array($_GET['page'],$pages )){

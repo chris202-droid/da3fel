@@ -1,5 +1,4 @@
-<?PHP echo "yes"; ?>
- <?php 
+<?php 
  session_start();
  $NomUtilisateur = "";
 $Mot2Pass = "";
